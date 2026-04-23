@@ -1,0 +1,64 @@
+body {
+    background-color: rgb(255, 255, 255);
+    font-size: medium;
+    text-align: center;
+    font-style: normal;
+    
+}
+h1 {
+    font-size: 40px;
+
+}
+
+img {
+    width: 20%;
+    display: block;
+    margin: 0  auto;
+    padding: 30px;
+}
+
+h2 {
+    
+    text-align: center;
+    font-size: large;
+    color: #3469a9;
+
+}
+.list {
+    list-style-type: none;
+}
+
+#content {
+    width: 600px;
+    height: 700px;
+    margin: 100px auto;
+    border: 2px solid rgb(147, 147, 147);
+    padding: 100px;
+}
+
+#intro {
+    text-align: left;
+}
+
+h3 {
+    text-align: left;
+    font-style: italic;
+    
+}
+
+#topics {
+    line-height: 1.5em;
+    margin: 0  auto;
+    width: 100%;
+    font-size: medium;
+    text-align: left;
+    
+}
+
+p {
+    margin-top: 30px;
+}
+
+#header1 {
+    font-style: italic;
+}
