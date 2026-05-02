@@ -1,0 +1,27 @@
+/*jdhgkd*/
+/*
+
+computational thinking
+
+functions wont work if they are not called or invoked.
+function changeTheme() {
+    // ... code header
+}
+
+Event Listeners:
+
+let selectElem = document.queryselector('#theme-select');
+// event listens for a function name to execute or run when and event on the web page happens (like user clicks on someting or moves mouse over something. 'change' is the event like the click of the mouse,.
+selectElem.addEventListener('change', changeTheme);
+
+condistionals
+
+if/ else statements
+
+if (current === 'ocean'){
+    // do something
+    }else if (current === 'forrest') {
+    // do something else 
+}   else {
+    // do something else as default.
+}

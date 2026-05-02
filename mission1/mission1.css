@@ -1,8 +1,8 @@
 body {
     background-color: rgb(255, 255, 255);
-    font-size: medium;
+    /*font-size: medium;
     text-align: center;
-    font-style: normal;
+    font-style: normal;*/
     
 }
 h1 {
@@ -34,6 +34,10 @@ h2 {
     margin: 100px auto;
     border: 2px solid rgb(147, 147, 147);
     padding: 100px;
+    font-size: medium;
+    text-align: center;
+    font-style: normal;
+    
 }
 
 #intro {
