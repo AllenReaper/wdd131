@@ -5,7 +5,10 @@ img {
     object-fit: cover;
     padding: 5px;
 }
-
+body{
+    margin: 0;
+    padding: 0;
+}
 header
 {
   max-width: 1000px;
@@ -18,12 +21,12 @@ main
  {
   max-width: 1000px;
   margin: 1rem auto;
-  
+  justify-content: center;
   padding: 1rem;
   background-color: #ccc;
 }
 section {
-  padding: 20px;
+  padding: 3px;
   background-color: white;
   margin: 1em;
   border: 1px solid #ccc;
