@@ -1,0 +1,128 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
+/* Container */
+
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    
+    
+}
+
+/* Header */
+
+
+header h1 {
+    color: #3b2736;
+    font-size: 2rem;
+    margin: 20px 0 10px;
+    text-align: center;
+}
+
+/* Nav */
+
+nav {
+    border-top: 1px solid #eec599;
+    border-bottom: 1px solid #eec599;
+    padding: 12px 0;
+}
+
+nav div{
+
+    justify-self: right;
+}
+nav a {
+    text-decoration: none;
+    color: #b00030;
+    margin: 0 18px;
+    font-size: 0.9rem;    
+}
+
+/* Main */
+
+main {
+    padding: 20px;
+}
+
+/* article */
+.book {
+    display: grid;
+    grid-template-columns: 150px 1fr;
+    gap: 25px;
+    align-items: start;
+}
+
+
+.details {
+    text-align: right;
+    border-right: 1px solid #eec599;
+    padding-right: 20px;
+    font-size: 1rem;
+}
+
+.date {
+    font-style: italic;
+    font-weight: bold;
+    font-size: 0.9rem;
+}
+
+.stars {
+    color: #b00030;
+}
+
+/* content */
+
+.content h2 {
+    color: #b00030;
+    margin-top: 0;
+    margin-bottom: 20px;
+    font-size: 1.5rem;
+    
+}
+
+.content img {
+    width: 180px;
+    display: block;
+    margin-bottom: 20px;
+    justify-self: center;
+}
+
+.content p {
+    max-width: 500px;
+    line-height: 1.4;
+}
+
+/* foot */
+
+footer {
+    border-top: 1px solid #eec599;
+    text-align: center;
+    padding: 10px;
+    font-size: 0.9rem;
+}
+
+
+
+@media screen and (max-width: 600px) {
+
+    .book {
+        grid-template-columns: 1fr;
+    }
+
+    .details {
+        text-align: right;
+        border-right: none;
+        border-top: 1px solid #eec599;
+        padding-bottom: 15px;
+        margin-bottom: 15px;
+    }
+
+    .content img {
+        width: 150px;
+    }
+}
