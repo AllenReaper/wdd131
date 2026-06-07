@@ -29,6 +29,11 @@
         <input id="email" name="email" type="email" required />
       </div>
 
+      <div class="field full">
+        <label for="phoneNumber">Phone Number</label>
+        <input id="phoneNumber" name="phoneNumber" type="text" required />
+      </div>
+
       <div class="field">
         <label for="travelRange">Date Ideas</label>
         <select
@@ -56,7 +61,20 @@
         <input id="availableDate" name="availableDate" type="date" required />
       </div>
 
-      
+      <div id="notesContainer" class="field full" hidden>
+        <label for="notes" id="notesLabel">Notes</label>
+  
+        <input id="notes" name="notes" type="text" />
+
+        <select id="movieGenre" name="movieGenre" hidden>
+          <option value="">Select a genre...</option>
+          <option value="romcom">Romantic Comedy</option>
+          <option value="StarWars">Star Wars</option>
+          <option value="action">Action</option>
+          <option value="sci-fi">Sci-Fi</option>
+          <option value="comedy">Comedy</option>
+        </select>
+      </div>
 
       <div id="notesContainer" class="field full" hidden>
         <label for="notes" id="notesLabel">Travel Notes</label>

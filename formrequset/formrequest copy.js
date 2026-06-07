@@ -1,34 +1,54 @@
 
+
+
+
 const form = document.querySelector("#fsyForm");
 const travelRange = document.querySelector("#travelRange");
 const notesContainer = document.querySelector("#notesContainer");
 const notes = document.querySelector("#notes");
 const output = document.querySelector("#output");
-const campusBoxes = document.querySelectorAll('input[name="campus"]');
+const notesLabel = document.querySelector("#notesLabel");
 
-function updateNotesField() {
-  const value = travelRange.value;
-
-  // Show the travel notes on the form if they are choosing many campuses and require it
-  
-}
 
 travelRange.addEventListener("change", updateNotesField);
-updateNotesField();
 
 
-// Ensure they choose a date later than the current date
 function isPastDate(value) {
   const today = new Date();
   const chosen = new Date(value);
   return chosen < today;
+
 }
 
-function getSelectedCampuses() {
-  //.from converts a NodeList into a real array, so then you can use .filter and .map
-  return Array.from(campusBoxes)
-    .filter(box => box.checked)
-    .map(box => box.value); 
+
+function updateNotesField() {
+  const selectedText =
+    travelRange.options[travelRange.selectedIndex].text;
+
+  if (selectedText === "other") {
+    notesContainer.hidden = false;
+  }else {
+    notesContainer.hidden = true; // show notes for all options
+  }
+    switch (travelRange.value) {
+    case "movie":
+      notesLabel.textContent = "Favorite movie genre?";
+      break;
+
+    case "stargazing":
+      notesLabel.textContent = "Best place to watch the stars?";
+      break;
+
+    case "gym":
+      notesLabel.textContent = "What workout are we doing?";
+      break;
+
+    case "other":
+      notesLabel.textContent = "Describe your date idea";
+      break;
+    }
+
+  
 }
 
 form.addEventListener("submit", function (event) {
@@ -40,28 +60,21 @@ form.addEventListener("submit", function (event) {
   const email = form.email.value.trim();
   const type = form.travelRange.value;
   const availableDate = form.availableDate.value;
-  const selectedCampuses = getSelectedCampuses();
   const note = form.notes.value.trim();
   const phoneNumber = form.phoneNumber.value.trim();
 
-  // Validate the input
-  // Let the user know to select at least one campus
-
-  
-  // Let the user know if they choose many campuses but didn't put a note that they need to add a note
-
-  
-  //Let the user know if they choose many campus but only had one campus selected that they need to choose at least two campuses
-  
-
   if (isPastDate(availableDate)) {
-    output.textContent = "Please choose a later date.";
+    output.textContent += "Please choose a later date.";
     return;
   }
 
-  
+  if (phoneNumber != 10) {
+    output.textContent += "Number needs to be 10 digits baby!";
+    return;
+  }
 
-  
+
+
 
   output.innerHTML = `
   <h2>Preference Submitted</h2>
@@ -69,11 +82,10 @@ form.addEventListener("submit", function (event) {
   <p>Email: ${email}</p>
   <p>Phone Number: ${phoneNumber}</p>
   <p>Availability: ${availableDate}</p>
-  <p>Campuses: ${selectedCampuses.join(", ")}</p>
-  <p>Preference Level: ${type}</p>
+  <p>Chosen Date: ${travelRange.options[travelRange.selectedIndex].text}</p>
+  ${note ? `<p>Travel Notes: ${note}</p>` : ""}
   `;
 
   form.reset();
   updateNotesField();
 });
-          
