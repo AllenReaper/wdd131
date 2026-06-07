@@ -1,4 +1,44 @@
 
+// retrieve the form from the DOM, print out the result
+//const form = document.querySelector("#fsyForm");
+
+//console.log(form);
+
+//add event listiner to the form to detect submit
+
+//form.addEventListener("submit", event => {
+//  event.preventDefault();
+//  console.log(event);
+//  console.log(form.firstName.value);
+
+//    const numberOfCampuses = form.travelRange.value;
+//    const campuses = form.campus.value;
+//    console.log(campuses);
+//    if(numberOfCampuses === "one" && 
+//        getCheckedCampuses(campuses).length == 0) {
+//          console.log("no campuses checked");
+
+//          document.getElementById("output")
+//                  .textContent = "please select one campus, josh";
+//    }
+//});
+//function getCheckedCampuses(campuses){
+    //  return Array.from(campuses)
+    //  .filter(campus => campus.checked)
+    //  .map(campus => campus.value);
+
+
+//}
+
+
+
+
+
+
+
+
+
+
 const form = document.querySelector("#fsyForm");
 const travelRange = document.querySelector("#travelRange");
 const notesContainer = document.querySelector("#notesContainer");
@@ -31,6 +71,14 @@ function getSelectedCampuses() {
     .map(box => box.value); 
 }
 
+
+
+function isDateValid() {
+  const date = document.getElementById("avalableDate").value;
+  const todaysDate = new Date();
+  return date > todaysDate;
+}
+
 form.addEventListener("submit", function (event) {
   event.preventDefault();
   output.textContent = "";
@@ -42,6 +90,10 @@ form.addEventListener("submit", function (event) {
   const availableDate = form.availableDate.value;
   const selectedCampuses = getSelectedCampuses();
   const note = form.notes.value.trim();
+
+
+
+    
 
   // Validate the input
   // Let the user know to select at least one campus
@@ -57,10 +109,6 @@ form.addEventListener("submit", function (event) {
     output.textContent = "Please choose a later date.";
     return;
   }
-
-  
-
-  
 
   output.innerHTML = `
   <h2>Preference Submitted</h2>

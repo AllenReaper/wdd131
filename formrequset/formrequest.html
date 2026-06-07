@@ -1,0 +1,73 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Date with Josh Form</title>
+  <link rel="icon" href="favicon.ico">
+  <link rel="stylesheet" href="formrequest.css" />
+  <script src="formrequest.js" defer></script>
+</head>
+<body>
+  <main class="wrapper">
+    <h1>Date With Josh Request</h1>
+
+    <form id="fsyForm">
+      <div class="field">
+        <label for="firstName">First Name</label>
+        <input id="firstName" name="firstName" type="text" required />
+      </div>
+
+      <div class="field">
+        <label for="lastName">Last Name</label>
+        <input id="lastName" name="lastName" type="text" required />
+      </div>
+
+      <div class="field full">
+        <label for="email">Email</label>
+        <input id="email" name="email" type="email" required />
+      </div>
+
+      <div class="field">
+        <label for="travelRange">Date Ideas</label>
+        <select
+          id="travelRange"
+          name="travelRange"
+          aria-controls="notesContainer"
+          required>
+
+          <option value="">Choose one</option>
+          <option value="movie">Movie Date</option>
+          <option value="stargazing">Star Gazing</option>
+          <option value="buffalo">Buffulo Riding</option>
+          <option value="beaver">A Stroll in his Beaver Kingdom</option>
+          <option value="pirate">A Ride on His Pirate Ship</option>
+          <option value="banana">Learn how to "BANANA"</option>
+          <option value="gym">Gym Date</option>
+          <option value="lincoln">Meet Abraham Lincoln</option>
+          <option value="squidward">Meet Handsome Squidward</option>
+          <option value="other">Other</option>
+        </select>
+      </div>
+
+      <div class="field">
+        <label for="availableDate">Available Date</label>
+        <input id="availableDate" name="availableDate" type="date" required />
+      </div>
+
+      
+
+      <div id="notesContainer" class="field full" hidden>
+        <label for="notes" id="notesLabel">Travel Notes</label>
+        <input id="notes" name="notes" type="text" />
+      </div>
+
+      <button class="full" type="submit">Submit Request</button>
+    </form>
+
+    <section id="output" aria-live="polite"></section>
+  </main>
+</body>
+</html>
+          
