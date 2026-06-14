@@ -49,11 +49,13 @@
   .stats {
     margin: 10px 15px 7px 35px;
     text-align: left;
+    
   }
 
   .stats p {
     margin: 5px 0;
     color: #f0f4f8;
+    font-size: large;
   }
 
   .buttons {
