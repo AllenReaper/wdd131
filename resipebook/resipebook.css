@@ -1,0 +1,205 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 30px;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f4f4f4;
+}
+
+/* =========================
+   Header
+========================= */
+
+.logo-header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 30px;
+}
+
+.logo-header h1 {
+    margin: 0;
+}
+
+#resbook {
+    display: block;
+    width: 110px;
+    
+}
+
+h1 {
+    text-align: center;
+    font-size: 3rem;
+    font-family: "Trebuchet MS", sans-serif;
+    margin-bottom: 30px;
+    letter-spacing: 2px;
+}
+
+/* Place icon and title side-by-side */
+body > img,
+body > h1 {
+    display: inline-block;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+/* =========================
+   Search Bar
+========================= */
+
+.searchB {
+    margin-bottom: 20px;
+    
+}
+
+.searchB input {
+    width: 100%;
+    padding: 12px;
+    font-size: 1rem;
+    border: 2px solid #888;
+    border-radius: 3px;
+}
+
+/* =========================
+   Recipe Card
+========================= */
+
+.resipe_sec {
+    display: flex;
+    gap: 25px;
+    padding: 15px;
+    border: 2px solid #666;
+    border-radius: 6px;
+    background-color: white;
+    align-items: flex-start;
+}
+
+.resipe_sec img {
+    width: 280px;
+    height: auto;
+    object-fit: cover;
+}
+
+/* Right side content */
+.recipe-text-container {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+/* Dessert button */
+.btn {
+    align-self: flex-start;
+    padding: 6px 14px;
+    border: 1px solid #888;
+    background: white;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+
+
+/* Recipe title */
+h3 {
+    color: #3a8dde;
+    font-size: 2rem;
+    font-family: cursive;
+}
+
+/* Rating */
+.rating {
+    font-size: 1.2rem;
+}
+
+/* Description */
+.media-card-content p {
+    max-width: 350px;
+    line-height: 1.4;
+    font-size: 0.95rem;
+}
+
+/* =========================
+   Footer
+========================= */
+
+.social {
+    display: flex;
+    justify-content: flex-end;
+    gap: 12px;
+    margin-top: 20px;
+}
+
+.social img {
+    width: 30px;
+    height: 30px;
+}
+
+a {
+    display: inline-block;
+    margin-top: 20px;
+    font-size: 0.8rem;
+}
+
+.logo-header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 30px;
+}
+
+.logo-header h1 {
+    margin: 0;
+}
+
+@media screen and (max-width: 600px) {
+
+    body {
+        padding: 15px;
+    }
+
+    .logo-header {
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    .logo-header h1 {
+        font-size: 2.5rem;
+    }
+
+    .resipe_sec {
+        flex-direction: column;
+        gap: 10px;
+        padding: 10px;
+    }
+
+    .resipe_sec img {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .recipe-text-container {
+        width: 100%;
+    }
+
+    h3 {
+        font-size: 1.5rem;
+    }
+
+
+    .social {
+        justify-content: center;
+        margin-top: 15px;
+    }
+}
