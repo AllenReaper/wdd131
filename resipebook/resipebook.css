@@ -1,4 +1,4 @@
-/* Reset */
+
 * {
     margin: 0;
     padding: 0;
@@ -13,9 +13,7 @@ body {
     background-color: #f4f4f4;
 }
 
-/* =========================
-   Header
-========================= */
+
 
 .logo-header {
     display: flex;
@@ -43,7 +41,7 @@ h1 {
     letter-spacing: 2px;
 }
 
-/* Place icon and title side-by-side */
+
 body > img,
 body > h1 {
     display: inline-block;
@@ -54,26 +52,33 @@ body {
     flex-direction: column;
 }
 
-/* =========================
-   Search Bar
-========================= */
+
 
 .searchB {
+    display: flex;
+    gap: 10px;
     margin-bottom: 20px;
-    
 }
 
 .searchB input {
-    width: 100%;
+    flex: 1;
     padding: 12px;
     font-size: 1rem;
     border: 2px solid #888;
     border-radius: 3px;
 }
 
-/* =========================
-   Recipe Card
-========================= */
+#searchButton {
+    padding: 2px 2px;
+    cursor: pointer;
+    
+}
+
+#imgbut{
+    max-width: 40px;
+    
+}
+
 
 .resipe_sec {
     display: flex;
@@ -91,14 +96,13 @@ body {
     object-fit: cover;
 }
 
-/* Right side content */
+
 .recipe-text-container {
     display: flex;
     flex-direction: column;
     gap: 12px;
 }
 
-/* Dessert button */
 .btn {
     align-self: flex-start;
     padding: 6px 14px;
@@ -110,28 +114,26 @@ body {
 
 
 
-/* Recipe title */
+
 h3 {
     color: #3a8dde;
     font-size: 2rem;
     font-family: cursive;
 }
 
-/* Rating */
+
 .rating {
     font-size: 1.2rem;
 }
 
-/* Description */
+
 .media-card-content p {
     max-width: 350px;
     line-height: 1.4;
     font-size: 0.95rem;
 }
 
-/* =========================
-   Footer
-========================= */
+
 
 .social {
     display: flex;

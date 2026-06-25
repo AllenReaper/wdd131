@@ -24,46 +24,24 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-    <link rel="stylesheet" href="resipebook.css">          
+    <link rel="stylesheet" href="resipebook.css">  
+    <script defer src="resipebook.js"></script>        
     <title>Resipe Bood</title>
 </head>
 <body>
     <header class="logo-header">
         <img id="resbook" src="images/recipe-book.png" alt="recipe book icon">
-        <h1>RecipeBook</h1>
+        <h1>Joshs Recipe Book</h1>
     </header>
     
     <div class="searchB">
-        <input type="text" placeholder="Search.."> 
+        <input id="search" type="text" placeholder="Search.."> 
+        <button id="searchButton">
+            <img id="imgbut" src="images/magnifying-glass.png" alt="search">
+        </button>
     </div>
-    <section class="resipe_sec">
-            
-        <img src="images/apple-crisp.jpg" alt="pie in a bowl"> 
-        <div class="recipe-text-container">
-                
-                <button class="btn default">Dessert</button>
-                
-                <h3>Apple Crisp</h3>
-                <span
-                class="rating"
-                role="img"
-                aria-label="Rating: 4 out of 5 stars"
-                >
-                <span aria-hidden="true" class="icon-star">⭐</span>
-                <span aria-hidden="true" class="icon-star">⭐</span>
-                <span aria-hidden="true" class="icon-star">⭐</span>
-                <span aria-hidden="true" class="icon-star">⭐</span>
-                <span aria-hidden="true" class="icon-star-empty">☆</span>
-            </span>
-            <div class="media-card-content">
-                <p>A paragraph with  more information about the topic mentioned in the heading.</p>
-            </div>
-        </div>
-        
     
-    </section>
-
-
+    <div id="recipeContainer"></div>
 
 
 <div class="social">
@@ -76,7 +54,8 @@
 
 
 
-<a href="https://www.flaticon.com/free-icons/recipe" title="recipe icons">Recipe icons created by Freepik - Flaticon</a>                   
+<a href="https://www.flaticon.com/free-icons/recipe" title="recipe icons">Recipe icons created by Freepik - Flaticon</a>   
+<a href="https://www.flaticon.com/free-icons/magnifying-glass" title="magnifying glass icons">Magnifying glass icons created by Freepik - Flaticon</a>              
                 
 </body>
 </html>
