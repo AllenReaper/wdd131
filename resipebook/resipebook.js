@@ -33,7 +33,7 @@ const recipes = [
 			'Cook until golden brown in a waffle iron. Serve with butter and Wilted Greens or Honey.'
 		],
 		recipeYield: '6 waffles',
-		rating: 4
+		rating: '⭐⭐⭐⭐'
 	},
 	{
 		author: 'Shane Thompson',
@@ -65,7 +65,7 @@ const recipes = [
 			'Serve sauce over rice, with the Green beans on the side.'
 		],
 		recipeYield: '3 servings',
-		rating: 4.5
+		rating: '⭐⭐⭐⭐⭐'
 	},
 	{
 		author: 'Shane Thompson',
@@ -95,7 +95,7 @@ const recipes = [
 			'Bake for 30 min or until the desired level of crispyness is achieved.'
 		],
 		recipeYield: '',
-		rating: 4
+		rating: '⭐⭐⭐⭐☆'
 	},
 	{
 		author: 'Shane Thompson',
@@ -128,7 +128,7 @@ const recipes = [
 			'Serve over rice, topped with grated cheese and Tortilla chips.'
 		],
 		recipeYield: '4 servings',
-		rating: 3
+		rating: '⭐⭐⭐☆☆'
 	},
 	{
 		author: 'Shane Thompson',
@@ -166,7 +166,7 @@ const recipes = [
 			'Can add condiments if desired: fried potatoes, raisins, toasted coconut, chutney, diced peppers, almonds, cashews.'
 		],
 		recipeYield: '5 servings',
-		rating: 5
+		rating: '⭐⭐⭐⭐⭐'
 	},
 	{
 		author: 'Shane Thompson',
@@ -200,7 +200,7 @@ const recipes = [
 			'Bake for 11-12 minutes.'
 		],
 		recipeYield: '8 dozen',
-		rating: 5
+		rating: '⭐⭐⭐⭐⭐'
 	},
 	{
 		author: 'Ester Kocht',
@@ -243,7 +243,7 @@ const recipes = [
 			'Now in a small pot combine milk, sugar and cornstarch (corn flour). Keep stirring constantly until it starts to bubble and has thickened. Remove from the heat and let cool for 2 to 3 minutes. In the meantime scatter gooseberries over the base. Add sour cream to the cream that you previously made and whisk. Spread the vanilla cream on top of the gooseberries and sprinkle the crumble evenly over the top and bake for 45 minutes or until the crumbles are lightly golden brown. Remove from the oven and let cool for few minutes. Serve it with whipped cream and enjoy!'
 		],
 		recipeYield: '12 servings',
-		rating: 5
+		rating: '⭐⭐⭐⭐⭐'
 	},
 	{
 		author: 'AllRecipes',
@@ -277,7 +277,7 @@ const recipes = [
 			'Bake in the preheated oven until top is golden brown and apples are bubbling around the edges, about 45 minutes.'
 		],
 		recipeYield: '12 servings',
-		rating: 4
+		rating: '⭐⭐⭐⭐☆'
 	}
 ]            
                     
@@ -286,6 +286,16 @@ const recipes = [
 const input = document.querySelector("#search");
 const searchButton = document.querySelector("#searchButton");
 const recipeContainer = document.querySelector("#recipeContainer");
+
+function getRandomRecipe() {
+    const randomIndex = Math.floor(Math.random() * recipes.length);
+    const randomRecipe = recipes[randomIndex];
+    
+    
+    displayRecipes([randomRecipe]);
+}
+
+window.addEventListener("DOMContentLoaded", getRandomRecipe);
 
 
 function displayRecipes(recipeList) {
@@ -303,7 +313,11 @@ function displayRecipes(recipeList) {
                 <div class="recipe-text-container">
                     <button class="btn">${recipe.tags[0]}</button>
                     <h3>${recipe.name}</h3>
+					<p>Rating ${recipe.rating}</p>
                     <p>${recipe.description}</p>
+					<p>Prep Time ${recipe.prepTime}</p>
+					<p>Cook Time: ${recipe.cookTime}</p>
+					<p>How many this makes: ${recipe.recipeYield}</p>
                 </div>
             </section>
         `;
